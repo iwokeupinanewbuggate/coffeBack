@@ -1,0 +1,36 @@
+{
+  "name": "coffebackend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run codegen && next dev -p 5000",
+    "build": "npm run codegen && next build",
+    "codegen": "graphql-codegen --config codegen.ts",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.10.5",
+    "@apollo/server": "^4.10.4",
+    "@as-integrations/next": "^3.0.0",
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/typescript-react-apollo": "^4.3.0",
+    "@graphql-codegen/typescript-react-query": "^6.1.0",
+    "@graphql-tools/merge": "^9.0.4",
+    "graphql": "^16.8.2",
+    "graphql-tag": "^2.12.6",
+    "mongodb": "^6.7.0",
+    "mongoose": "^8.4.1",
+    "next": "14.2.4",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
+    "typescript": "^5.5.3"
+  }
+}
