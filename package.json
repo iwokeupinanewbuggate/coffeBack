@@ -17,6 +17,7 @@
     "@graphql-codegen/typescript-react-apollo": "^4.3.0",
     "@graphql-codegen/typescript-react-query": "^6.1.0",
     "@graphql-tools/merge": "^9.0.4",
+    "expo-linear-gradient": "^13.0.2",
     "graphql": "^16.8.2",
     "graphql-tag": "^2.12.6",
     "mongodb": "^6.7.0",
