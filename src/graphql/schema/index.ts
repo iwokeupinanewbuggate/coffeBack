@@ -25,6 +25,15 @@ export const typeDefs = gql`
     description: String!
   }
 
+  input editProduct {
+    productId: ID!
+    name: String!
+    price: priceInputType!
+    category: String!
+    image: String!
+    description: String!
+  }
+
   input priceInputType {
     small: Int!
     meduim: Int!
@@ -117,9 +126,12 @@ export const typeDefs = gql`
   }
 
   type Query {
-    getProduct: [product!]
+    getProduct: [product!]!
     getUser(id: ID!): user!
     getMyOrders(id: ID!): order!
+    getCategory: [category!]
+    getOrders: [order!]
+    getOneProduct(id: ID!): product!
   }
 
   type Mutation {
@@ -131,5 +143,6 @@ export const typeDefs = gql`
     addCategory(input: categoryInput!): category!
     deleteUser(id: ID!): user!
     addCoupon(input: couponInput!): coupon!
+    editProduct(input: editProduct!): product!
   }
 `;

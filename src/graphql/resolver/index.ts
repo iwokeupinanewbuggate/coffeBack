@@ -4,18 +4,28 @@ import {
   addProduct,
   createOrder,
   deleteUser,
+  editProduct,
   login,
   removeProduct,
   signIn,
 } from "./mutiation";
-import { getMyOrders, getUser } from "./query";
+import {
+  getCategory,
+  getMyOrders,
+  getOneProduct,
+  getOrders,
+  getUser,
+} from "./query";
 import { getProduct } from "./query/getProduct";
 
 export const resolvers = {
   Query: {
     getProduct,
     getUser,
-    getMyOrders
+    getMyOrders,
+    getCategory,
+    getOrders,
+    getOneProduct,
   },
   Mutation: {
     addProduct,
@@ -25,6 +35,7 @@ export const resolvers = {
     createOrder,
     addCategory,
     deleteUser,
-    addCoupon
+    addCoupon,
+    editProduct,
   },
 };

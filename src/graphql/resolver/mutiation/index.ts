@@ -5,4 +5,5 @@ export * from "./login";
 export * from "./createOrder";
 export * from "./addcategory";
 export * from "./deleteUser";
-export * from "./addCoupons"
+export * from "./addCoupons";
+export * from "./editProduct";

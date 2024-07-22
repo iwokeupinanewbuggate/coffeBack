@@ -22,6 +22,7 @@ export type Mutation = {
   addProduct: Product;
   createOrder: Order;
   deleteUser: User;
+  editProduct: Product;
   login: User;
   removeProduct: Product;
   signIn: User;
@@ -53,6 +54,11 @@ export type MutationDeleteUserArgs = {
 };
 
 
+export type MutationEditProductArgs = {
+  input: EditProduct;
+};
+
+
 export type MutationLoginArgs = {
   input: LoginInput;
 };
@@ -76,13 +82,21 @@ export type PriceType = {
 
 export type Query = {
   __typename?: 'Query';
+  getCategory?: Maybe<Array<Category>>;
   getMyOrders: Order;
-  getProduct?: Maybe<Array<Product>>;
+  getOneProduct: Product;
+  getOrders?: Maybe<Array<Order>>;
+  getProduct: Array<Product>;
   getUser: User;
 };
 
 
 export type QueryGetMyOrdersArgs = {
+  id: Scalars['ID']['input'];
+};
+
+
+export type QueryGetOneProductArgs = {
   id: Scalars['ID']['input'];
 };
 
@@ -112,6 +126,15 @@ export type CouponInput = {
   code: Scalars['String']['input'];
   discount: Scalars['String']['input'];
   expirationDate: Scalars['Date']['input'];
+};
+
+export type EditProduct = {
+  category: Scalars['String']['input'];
+  description: Scalars['String']['input'];
+  image: Scalars['String']['input'];
+  name: Scalars['String']['input'];
+  price: PriceInputType;
+  productId: Scalars['ID']['input'];
 };
 
 export type LoginInput = {
