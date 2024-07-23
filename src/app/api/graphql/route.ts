@@ -15,10 +15,5 @@ connectDB();
 const handler = startServerAndCreateNextHandler<NextRequest>(server, {
   context: async (req) => ({ req }),
 });
-export const config = {
-  api: {
-    bodyParser: false,
-    externalResolver: true,
-  },
-};
+
 export { handler as GET, handler as POST };
