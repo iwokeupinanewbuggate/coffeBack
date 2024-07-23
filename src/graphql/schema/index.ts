@@ -132,6 +132,7 @@ export const typeDefs = gql`
     getCategory: [category!]
     getOrders: [order!]
     getOneProduct(id: ID!): product!
+    getProductCategory(id: ID!): category!
   }
 
   type Mutation {

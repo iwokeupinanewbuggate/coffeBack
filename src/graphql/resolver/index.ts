@@ -16,6 +16,7 @@ import {
   getOrders,
   getUser,
 } from "./query";
+import { getProductCategory } from "./query/getOneCategory";
 import { getProduct } from "./query/getProduct";
 
 export const resolvers = {
@@ -26,6 +27,7 @@ export const resolvers = {
     getCategory,
     getOrders,
     getOneProduct,
+    getProductCategory,
   },
   Mutation: {
     addProduct,
