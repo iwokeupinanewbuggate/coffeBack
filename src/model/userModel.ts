@@ -8,7 +8,7 @@ const user = new mongoose.Schema({
   profilePic: {
     type: String,
     default:
-      "https://www.pngfind.com/pngs/m/676-6764065_default-profile-picture-transparent-hd-png-download.png",
+      "https://res.cloudinary.com/db0wbldom/image/upload/v1721899629/pngwing.com_uh6xss.png",
   },
   address: { type: String, default: "" },
   paymentInfo: {
